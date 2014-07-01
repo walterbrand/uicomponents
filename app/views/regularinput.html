@@ -1,0 +1,15 @@
+<form name="regular" ng-controller="regularController" ng-class="{showValidation : data.showValidation}">
+    <ui-textinput ng-model="data.name" placeholder="enter your name" required></ui-textinput>
+    <div>
+        Your name is: {{data.name}}
+    </div>
+    <button ng-click="data.showValidation = !data.showValidation">Toggle Show validation</button>
+
+    <ui-wizard>
+        a
+        <ui-wizard-step id="one">
+            s
+            <ui-textinput ng-model="data.dat"></ui-textinput>
+        </ui-wizard-step>
+    </ui-wizard>
+</form>

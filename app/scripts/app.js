@@ -1,13 +1,11 @@
 'use strict';
 
-angular.module('uicomponentsApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+angular.module('uicomponents', ['ui.router'])
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
+
+        $stateProvider.state('home', {
+            url:'/',
+            templateUrl :'views/regularinput.html'
+        });
+    });
