@@ -27,7 +27,6 @@ angular.module('uicomponents')
             // - het event van hierboven
             // - de stap waar je nu zit
             // - de stap waar je naartoe gaat
-            $scope.$emit('wizardChangeStart', event, steps[fromStep], steps[toStep]);
 
             if (continueAction) {
                 currentStep = toStep;
