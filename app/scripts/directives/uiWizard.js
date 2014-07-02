@@ -20,6 +20,3 @@ angular.module('uicomponents')
         };
     });
 
-angular.module('uicomponents').controller('formwizardController', function($scope){
-    console.log('FWC',$scope)
-});
