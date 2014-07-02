@@ -3,11 +3,11 @@
 angular.module('uicomponents')
     .directive('uiWizardStep', function ($timeout) {
         return {
-            template: '<div ng-transclude ng-show="show()"></div>',
+            // TODO: maak een template die de inhoud kan transcluden en (on)zichtbaar wordt door te kijken naar show()
             restrict: 'E',
-            transclude: true,
+            // TODO: zorg ervoor dat transcluden is toegestaan
             scope: {id:'@'},
-            require :'^uiWizard',
+            // TODO: zorg ervoor dat we de uiWizard als parent controller verplicht maken
             link: function postLink(scope, element, attrs, uiWizard) {
                 scope.show = function(){
                     return scope.id == uiWizard.getSelected();

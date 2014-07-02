@@ -5,7 +5,7 @@ angular.module('uicomponents')
         return {
             templateUrl: 'partials/uiwizard.html',
             restrict: 'E',
-            transclude: true,
+            // TODO: zorg ervoor dat deze directive mag transcluden
             scope : {},
             controller : 'uiWizardController',
             link: function (scope, element, attrs, $transclude) {
