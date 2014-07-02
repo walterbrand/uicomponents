@@ -6,7 +6,7 @@ angular.module('uicomponents')
 
         $scope.$on('wizardChangeStart', function(eventName, event, fromStep, toStep){
             if(dataService.submit()) {
-                $scope.output.personName = dataService.getData().personName;
+                $scope.output = dataService.getData();
             } else {
                 isValidationShown = true;
                 event.preventDefault();

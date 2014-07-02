@@ -6,6 +6,6 @@ angular.module('uicomponents', ['ui.router'])
 
         $stateProvider.state('home', {
             url:'/',
-            templateUrl :'views/regularinput.html'
+            templateUrl :'views/myapplication.html'
         });
     });

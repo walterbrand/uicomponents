@@ -7,6 +7,10 @@ angular.module('uicomponents')
             return $scope.formulier.$valid;
         }
 
+        $scope.data = {
+            balance : '190.95'
+        };
+
         dataService.registerFormHandler(checkForm);
 
     }]);
