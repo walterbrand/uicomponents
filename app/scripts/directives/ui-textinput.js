@@ -1,20 +1,18 @@
 'use strict';
 
 angular.module('uicomponents')
-    .directive('uiTextinput', function ($filter) {
+    .directive('uiTextinput', function () {
         return {
-            template: '<div><input type="text" placeholder="{{placeholder}}" ng-model="ngModel" /></div>',
+            // TODO: maak een template waarbij je de placeholder tekst overneemt en ngModel koppelt
             scope: {
-                placeholder: '@',
-                ngModel: '='
+                // TODO: maak een one way binding met placeholder
+                // TODO: maak een two way binding met ngModel
             },
             require: 'ngModel',
             restrict: 'E',
             replace: true,
             link: function postLink(scope, element, attrs, ngModel) {
-                scope.internal = {
 
-                }
             }
         }
     });

@@ -4,7 +4,14 @@
         <ui-wizard-step id="one">
             <form name="formulier" ng-controller="formController">
                 Vul hieronder je naam in:<br />
-                <ui-textinput ng-model="data.personName" name="personName" placeholder="Jouw naam..." required></ui-textinput>
+                <!-- TODO:
+                    breidt ui-textinput uit met
+                    - koppel de data.personName via ngModel
+                    - geef het element een naam
+                    - geef een placeholder tekst op
+                    - zorg ervoor dat het element verplicht wordt
+                -->
+                <ui-textinput></ui-textinput>
                 Wat is jouw saldo?
                 <ui-money ng-model="data.balance"></ui-money>
             </form>
