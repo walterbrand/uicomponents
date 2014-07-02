@@ -3,7 +3,7 @@
 angular.module('uicomponents')
     .directive('uiMoney', function () {
         return {
-            template: '<div><input type="text" ng-model="data.euros" size="10" ng-change="update()"/><input type="text" ng-model="data.cents" size="5" ng-change="update()"/></div>',
+            templateUrl: 'partials/uimoney.html',
             restrict: 'E',
             require : 'ngModel',
             replace: true,

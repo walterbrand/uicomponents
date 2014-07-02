@@ -3,7 +3,7 @@
 angular.module('uicomponents')
     .directive('uiWizard', function () {
         return {
-            template: '<div><div ng-transclude></div><br /><button ng-click="action(\'previous\')">Vorige</button><button ng-click="action(\'next\')">Volgende</button></div>',
+            templateUrl: 'partials/uiwizard.html',
             restrict: 'E',
             transclude: true,
             scope : {},
