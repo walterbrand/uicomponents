@@ -3,7 +3,8 @@
 angular.module('uicomponents')
     .factory('dataService', function () {
 
-        var data = null;
+        var data = null,
+            formHandler = null;
 
         function getData(){
             return data;
@@ -13,9 +14,19 @@ angular.module('uicomponents')
             data = _data_;
         }
 
+        function submit(){
+            return formHandler();
+        }
+
+        function registerFormHandler(_formHandler_) {
+            formHandler = _formHandler_;
+        }
+
         // Public API here
         return {
             getData : getData,
-            setData : setData
+            setData : setData,
+            submit : submit,
+            registerFormHandler : registerFormHandler
         };
     });

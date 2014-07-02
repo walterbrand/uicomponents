@@ -1,8 +1,23 @@
 'use strict';
 
 angular.module('uicomponents')
-  .controller('wizardController', function ($scope) {
+  .controller('wizardController', ['$scope', 'dataService', function ($scope, dataService) {
+        var isValidationShown = false;
+
         $scope.$on('wizardChangeStart', function(eventName, event, fromStep, toStep){
-            //event.preventDefault();
+            if(dataService.submit()) {
+                $scope.output.personName = dataService.getData().personName;
+            } else {
+                isValidationShown = true;
+                event.preventDefault();
+            }
         });
-  });
+
+        $scope.output = {
+            personName: 'Walt'
+        }
+
+        $scope.showValidation = function(){
+            return isValidationShown ? 'showValidation' : '';
+        }
+  }]);

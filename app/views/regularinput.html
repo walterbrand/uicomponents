@@ -1,9 +1,9 @@
-<div>
-    <ui-wizard ng-controller="wizardController">
+<div ng-controller="wizardController" ng-class="showValidation()">
+    <ui-wizard>
         <ui-wizard-step id="one">
             <form name="formulier" ng-controller="formController">
-                <ui-textinput ng-model="data.personName" name="personName" placeholder="Jouw naam..."></ui-textinput>
-                Jouw naam is: {{data.personName}}
+                Vul hieronder je naam in:<br />
+                <ui-textinput ng-model="data.personName" name="personName" placeholder="Jouw naam..." required></ui-textinput>
             </form>
         </ui-wizard-step>
         <ui-wizard-step id="two">
