@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('uicomponents')
-    .controller('formController', ['$scope', 'dataService', function ($scope, dataService) {
+    .controller('formController', ['$scope', function ($scope) {
+        // TODO: injecteer de dataService
         function checkForm(){
+            // TODO: set de recente data in de data service
             dataService.setData($scope.data)
             return $scope.formulier.$valid;
         }
@@ -11,6 +13,6 @@ angular.module('uicomponents')
             balance : '190.95'
         };
 
-        dataService.registerFormHandler(checkForm);
+        // TODO: registreer de form handler (= checkForm)
 
     }]);

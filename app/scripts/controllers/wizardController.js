@@ -1,20 +1,23 @@
 'use strict';
 
 angular.module('uicomponents')
-  .controller('wizardController', ['$scope', 'dataService', function ($scope, dataService) {
+  .controller('wizardController', ['$scope', function ($scope,dataService) {
+        // TODO: injecteer de dataService
         var isValidationShown = false;
 
         $scope.$on('wizardChangeStart', function(eventName, event, fromStep, toStep){
+
             if(dataService.submit()) {
-                $scope.output = dataService.getData();
+                //TODO: schrijf de data uit de dataService op $scope.output
             } else {
+                // Het formulier isvalid
                 isValidationShown = true;
-                event.preventDefault();
+                // TODO: zorg ervoor dat je preventDefault van het event aanroept
             }
         });
 
         $scope.output = {
-            personName: 'Walt'
+
         }
 
         $scope.showValidation = function(){

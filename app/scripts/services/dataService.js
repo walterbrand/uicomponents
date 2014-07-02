@@ -24,9 +24,6 @@ angular.module('uicomponents')
 
         // Public API here
         return {
-            getData : getData,
-            setData : setData,
-            submit : submit,
-            registerFormHandler : registerFormHandler
-        };
+            //TODO: expose de methoden om data te lezen, te zetten, een submit actie te kunnen doen en de formHandler te kunnen registeren
+       };
     });
