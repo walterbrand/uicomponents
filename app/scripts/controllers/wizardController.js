@@ -9,8 +9,8 @@ angular.module('uicomponents')
             if(dataService.submit()) {
                 // TODO: update $scope.output met de huidige data in de dataService
             } else {
-                isValidationShown = true;
-                event.preventDefault();
+                // TODO: zorig dat de validatie wordt getoond
+                // TODO: voorkom dat de volgende stap wordt gedaan (via preventDefault)
             }
         });
 
