@@ -8,7 +8,7 @@ angular.module('uicomponents')
             if(dataService.submit()) {
                 $scope.output = dataService.getData();
             } else {
-                isValidationShown = true;
+                // TODO: zorg ervoor dat de isValidationShow true wordt
                 event.preventDefault();
             }
         });
@@ -16,8 +16,5 @@ angular.module('uicomponents')
         $scope.output = {
             personName: 'Walt'
         }
-
-        $scope.showValidation = function(){
-            return isValidationShown ? 'showValidation' : '';
-        }
+        // TODO: voeg een functie toe op de scope die de juiste classnaam 'showValidation' teruggeeft  op basis van isValidationShown
   }]);
