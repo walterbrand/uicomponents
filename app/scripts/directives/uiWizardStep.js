@@ -8,17 +8,10 @@ angular.module('uicomponents')
             transclude: true,
             scope: {id:'@'},
             require :'^uiWizard',
-            link: function postLink(scope, element, attrs, uiWizard, $transclude) {
-                console.log(uiWizard, scope.id)
-                scope.show = function(a){
-                    console.log('sss', scope.id)
+            link: function postLink(scope, element, attrs, uiWizard) {
+                scope.show = function(){
                     return scope.id == uiWizard.getSelected();
                 }
-
-                $timeout(function(){
-                    scope.show()
-                },10)
-
             }
         };
     });

@@ -5,23 +5,28 @@ angular.module('uicomponents')
         var steps = ['one', 'two'],
             currentStep = 0;
 
-        this.ding = function () {
-        }
         this.show = function () {
-            console.log('aaa');
             return true
-        }
-        this.getSelected = function () {
-            return 'one'
-        }
+        };
 
-        $scope.next = function () {
-            console.log('emit')
-            var continueAction = true
-            var event = {preventDefault: function(){
-                continueAction = false;
-            }}
-            $scope.$emit('wizardChangeStart', event, steps[0], steps[1]);
-            console.log(continueAction);
+        this.getSelected = function () {
+            return steps[currentStep];
+        };
+
+        $scope.action = function (direction) {
+
+            var continueAction = true,
+                fromStep = direction === 'next' ? 0 : 1,
+                toStep = direction === 'next' ? 1 : 0,
+                event = {preventDefault: function(){
+                    continueAction = false;
+                }}
+
+            $scope.$emit('wizardChangeStart', event, steps[fromStep], steps[toStep]);
+
+            if (continueAction) {
+                currentStep = toStep;
+            }
+
         }
     });
