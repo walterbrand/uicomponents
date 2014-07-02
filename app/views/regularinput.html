@@ -1,15 +1,19 @@
-<form name="regular" ng-controller="regularController" ng-class="{showValidation : data.showValidation}">
-    <ui-textinput ng-model="data.name" placeholder="enter your name" required></ui-textinput>
-    <div>
-        Your name is: {{data.name}}
-    </div>
-    <button ng-click="data.showValidation = !data.showValidation">Toggle Show validation</button>
-
-    <ui-wizard>
-        a
+<div>
+    <form name="regular" ng-controller="regularController" ng-class="{showValidation : data.showValidation}">
+        <ui-textinput ng-model="data.name" placeholder="enter your name" required></ui-textinput>
+        <div>
+            Your name is: {{data.name}}
+        </div>
+        <button ng-click="data.showValidation = !data.showValidation">Toggle Show validation</button>
+    </form>
+    <ui-wizard ng-controller="formwizardController">
         <ui-wizard-step id="one">
-            s
-            <ui-textinput ng-model="data.dat"></ui-textinput>
+            <form name="formulier" >
+                <ui-textinput ng-model="data.dat" name="textin"></ui-textinput>
+            </form>
+        </ui-wizard-step>
+        <ui-wizard-step id="two">
+            {{dit.dat}}
         </ui-wizard-step>
     </ui-wizard>
-</form>
+</div>

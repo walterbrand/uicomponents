@@ -9,7 +9,7 @@ angular.module('uicomponents').controller('uiWizController', function(){
 angular.module('uicomponents')
     .directive('uiWizard', function () {
         return {
-            template: '<div ng-transclude></div>',
+            template: '<div><div ng-transclude></div><button>Vorige</button><button>Volgende</button></div>',
             restrict: 'E',
             transclude: true,
             scope : {},
@@ -19,3 +19,7 @@ angular.module('uicomponents')
             }
         };
     });
+
+angular.module('uicomponents').controller('formwizardController', function($scope){
+    console.log('FWC',$scope)
+});
