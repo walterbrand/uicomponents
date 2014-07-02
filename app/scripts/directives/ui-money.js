@@ -14,7 +14,7 @@ angular.module('uicomponents')
                 // TODO: lees de waarde van de ngModel van de scope, splits deze in euro's en centen en voeg deze toe aan de scope
 
                 scope.update = function(){
-                    //TODO: update de waarde van ngModel waarde in de scope
+                    //TODO: update de waarde van ngModel met de waarden in de scope
                     //TODO: pas de validity aan, waarbij alleen getallen worden geaccepteerd
                 }
             }
